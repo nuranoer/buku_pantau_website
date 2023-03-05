@@ -1,0 +1,417 @@
+CRITICAL - 2023-01-16 00:26:40 --> View themes, no current section.
+in SYSTEMPATH\View\View.php on line 394.
+ 1 APPPATH\Views\auth\login.php(106): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('\\App\\Views\\auth\\login', [], true)
+ 5 VENDORPATH\myth\auth\src\Controllers\AuthController.php(412): view('\\App\\Views\\auth\\login', [...])
+ 6 VENDORPATH\myth\auth\src\Controllers\AuthController.php(58): Myth\Auth\Controllers\AuthController->_render('\\App\\Views\\auth\\login', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(925): Myth\Auth\Controllers\AuthController->login()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 00:27:24 --> View themes, no current section.
+in SYSTEMPATH\View\View.php on line 394.
+ 1 APPPATH\Views\auth\login.php(106): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('\\App\\Views\\auth\\login', [], true)
+ 5 VENDORPATH\myth\auth\src\Controllers\AuthController.php(412): view('\\App\\Views\\auth\\login', [...])
+ 6 VENDORPATH\myth\auth\src\Controllers\AuthController.php(58): Myth\Auth\Controllers\AuthController->_render('\\App\\Views\\auth\\login', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(925): Myth\Auth\Controllers\AuthController->login()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 00:28:50 --> View themes, no current section.
+in SYSTEMPATH\View\View.php on line 394.
+ 1 APPPATH\Views\auth\login.php(106): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('\\App\\Views\\auth\\login', [], true)
+ 5 VENDORPATH\myth\auth\src\Controllers\AuthController.php(412): view('\\App\\Views\\auth\\login', [...])
+ 6 VENDORPATH\myth\auth\src\Controllers\AuthController.php(58): Myth\Auth\Controllers\AuthController->_render('\\App\\Views\\auth\\login', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(925): Myth\Auth\Controllers\AuthController->login()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 01:13:50 --> Class name must be a valid object or a string
+in VENDORPATH\myth\auth\src\Config\Services.php on line 81.
+ 1 SYSTEMPATH\Config\BaseService.php(253): Myth\Auth\Config\Services::activator(Object(Myth\Auth\Config\Auth), false)
+ 2 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('activator', [...])
+ 3 VENDORPATH\myth\auth\src\Config\Services.php(74): CodeIgniter\Config\BaseService::getSharedInstance('activator', null)
+ 4 SYSTEMPATH\Config\BaseService.php(253): Myth\Auth\Config\Services::activator()
+ 5 SYSTEMPATH\Common.php(960): CodeIgniter\Config\BaseService::__callStatic('activator', [])
+ 6 VENDORPATH\myth\auth\src\Controllers\AuthController.php(184): service('activator')
+ 7 SYSTEMPATH\CodeIgniter.php(925): Myth\Auth\Controllers\AuthController->attemptRegister()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 01:16:40 --> Class name must be a valid object or a string
+in VENDORPATH\myth\auth\src\Config\Services.php on line 81.
+ 1 SYSTEMPATH\Config\BaseService.php(253): Myth\Auth\Config\Services::activator(Object(Myth\Auth\Config\Auth), false)
+ 2 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('activator', [...])
+ 3 VENDORPATH\myth\auth\src\Config\Services.php(74): CodeIgniter\Config\BaseService::getSharedInstance('activator', null)
+ 4 SYSTEMPATH\Config\BaseService.php(253): Myth\Auth\Config\Services::activator()
+ 5 SYSTEMPATH\Common.php(960): CodeIgniter\Config\BaseService::__callStatic('activator', [])
+ 6 VENDORPATH\myth\auth\src\Controllers\AuthController.php(184): service('activator')
+ 7 SYSTEMPATH\CodeIgniter.php(925): Myth\Auth\Controllers\AuthController->attemptRegister()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 02:14:33 --> mysqli_sql_exception: Unknown column 'jadwal.nama_jadwal' in 'field list' in D:\xampp\htdocs\buku_pantau_web\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\buku_pantau_web\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `guru`.*...', 0)
+#1 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guru`.*...')
+#2 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guru`.*...')
+#3 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `guru`.*...', Array, false)
+#4 D:\xampp\htdocs\buku_pantau_web\app\Models\Guru.php(19): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\buku_pantau_web\app\Controllers\GuruController.php(20): App\Models\Guru->get_data()
+#6 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(925): App\Controllers\GuruController->index()
+#7 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+#8 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\buku_pantau_web\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\buku_pantau_web\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-16 02:14:33 --> Unknown column 'jadwal.nama_jadwal' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `guru`.*, `jadwal`.`nama_jadwal` AS `nama_jadwal`
+FROM `guru`
+JOIN `jadwal` ON `jadwal`.`id_jadwal` = `guru`.`id_jadwal`
+ORDER BY `guru`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guru`.*, `jadwal`.`nama_jadwal` AS `nama_jadwal`
+FROM `guru`
+JOIN `jadwal` ON `jadwal`.`id_jadwal` = `guru`.`id_jadwal`
+ORDER BY `guru`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guru`.*, `jadwal`.`nama_jadwal` AS `nama_jadwal`
+FROM `guru`
+JOIN `jadwal` ON `jadwal`.`id_jadwal` = `guru`.`id_jadwal`
+ORDER BY `guru`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `guru`.*, `jadwal`.`nama_jadwal` AS `nama_jadwal`
+FROM `guru`
+JOIN `jadwal` ON `jadwal`.`id_jadwal` = `guru`.`id_jadwal`
+ORDER BY `guru`.`id` DESC', [], false)
+ 5 APPPATH\Models\Guru.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\GuruController.php(20): App\Models\Guru->get_data()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\GuruController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 02:48:25 --> mysqli_sql_exception: Unknown column 'jadwal.nama_jadwal' in 'field list' in D:\xampp\htdocs\buku_pantau_web\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\buku_pantau_web\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `guru`.*...', 0)
+#1 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guru`.*...')
+#2 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guru`.*...')
+#3 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `guru`.*...', Array, false)
+#4 D:\xampp\htdocs\buku_pantau_web\app\Models\Guru.php(19): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\buku_pantau_web\app\Controllers\GuruController.php(20): App\Models\Guru->get_data()
+#6 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(925): App\Controllers\GuruController->index()
+#7 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+#8 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\buku_pantau_web\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\buku_pantau_web\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-16 02:48:25 --> Unknown column 'jadwal.nama_jadwal' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `guru`.*, `jadwal`.`nama_jadwal` AS `nama_jadwal`
+FROM `guru`
+JOIN `jadwal` ON `jadwal`.`id_jadwal` = `guru`.`id_jadwal`
+ORDER BY `guru`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guru`.*, `jadwal`.`nama_jadwal` AS `nama_jadwal`
+FROM `guru`
+JOIN `jadwal` ON `jadwal`.`id_jadwal` = `guru`.`id_jadwal`
+ORDER BY `guru`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guru`.*, `jadwal`.`nama_jadwal` AS `nama_jadwal`
+FROM `guru`
+JOIN `jadwal` ON `jadwal`.`id_jadwal` = `guru`.`id_jadwal`
+ORDER BY `guru`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `guru`.*, `jadwal`.`nama_jadwal` AS `nama_jadwal`
+FROM `guru`
+JOIN `jadwal` ON `jadwal`.`id_jadwal` = `guru`.`id_jadwal`
+ORDER BY `guru`.`id` DESC', [], false)
+ 5 APPPATH\Models\Guru.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\GuruController.php(20): App\Models\Guru->get_data()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\GuruController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 02:50:07 --> mysqli_sql_exception: Unknown column 'guru.id' in 'order clause' in D:\xampp\htdocs\buku_pantau_web\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\buku_pantau_web\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `guru`.*...', 0)
+#1 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guru`.*...')
+#2 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guru`.*...')
+#3 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `guru`.*...', Array, false)
+#4 D:\xampp\htdocs\buku_pantau_web\app\Models\Guru.php(19): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\buku_pantau_web\app\Controllers\GuruController.php(20): App\Models\Guru->get_data()
+#6 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(925): App\Controllers\GuruController->index()
+#7 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+#8 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\buku_pantau_web\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\buku_pantau_web\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-16 02:50:07 --> Unknown column 'guru.id' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `guru`.*, `jadwal`.`hari` AS `hari`
+FROM `guru`
+JOIN `jadwal` ON `jadwal`.`id_jadwal` = `guru`.`id_jadwal`
+ORDER BY `guru`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guru`.*, `jadwal`.`hari` AS `hari`
+FROM `guru`
+JOIN `jadwal` ON `jadwal`.`id_jadwal` = `guru`.`id_jadwal`
+ORDER BY `guru`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guru`.*, `jadwal`.`hari` AS `hari`
+FROM `guru`
+JOIN `jadwal` ON `jadwal`.`id_jadwal` = `guru`.`id_jadwal`
+ORDER BY `guru`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `guru`.*, `jadwal`.`hari` AS `hari`
+FROM `guru`
+JOIN `jadwal` ON `jadwal`.`id_jadwal` = `guru`.`id_jadwal`
+ORDER BY `guru`.`id` DESC', [], false)
+ 5 APPPATH\Models\Guru.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\GuruController.php(20): App\Models\Guru->get_data()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\GuruController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 02:50:27 --> Invalid file: dataguru/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dataguru/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dataguru/index', [], true)
+ 3 APPPATH\Controllers\GuruController.php(21): view('dataguru/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\GuruController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 03:27:02 --> Attempt to read property "nip" on array
+in APPPATH\Views\admin\dataguru\index.php on line 44.
+ 1 APPPATH\Views\admin\dataguru\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nip" on array', 'APPPATH\\Views\\admin\\dataguru\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dataguru\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/dataguru/index', [], true)
+ 5 APPPATH\Controllers\GuruController.php(21): view('admin/dataguru/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\GuruController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 03:28:06 --> Attempt to read property "nip" on array
+in APPPATH\Views\admin\dataguru\index.php on line 44.
+ 1 APPPATH\Views\admin\dataguru\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nip" on array', 'APPPATH\\Views\\admin\\dataguru\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dataguru\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/dataguru/index', [], true)
+ 5 APPPATH\Controllers\GuruController.php(21): view('admin/dataguru/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\GuruController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 03:28:59 --> Attempt to read property "nip" on array
+in APPPATH\Views\admin\dataguru\index.php on line 44.
+ 1 APPPATH\Views\admin\dataguru\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nip" on array', 'APPPATH\\Views\\admin\\dataguru\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dataguru\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/dataguru/index', [], true)
+ 5 APPPATH\Controllers\GuruController.php(21): view('admin/dataguru/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\GuruController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 03:35:35 --> Attempt to read property "nip" on array
+in APPPATH\Views\admin\dataguru\index.php on line 44.
+ 1 APPPATH\Views\admin\dataguru\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nip" on array', 'APPPATH\\Views\\admin\\dataguru\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dataguru\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/dataguru/index', [], true)
+ 5 APPPATH\Controllers\GuruController.php(21): view('admin/dataguru/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\GuruController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 03:35:47 --> Attempt to read property "nip" on array
+in APPPATH\Views\admin\dataguru\index.php on line 44.
+ 1 APPPATH\Views\admin\dataguru\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nip" on array', 'APPPATH\\Views\\admin\\dataguru\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dataguru\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/dataguru/index', [], true)
+ 5 APPPATH\Controllers\GuruController.php(21): view('admin/dataguru/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\GuruController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 03:38:00 --> Attempt to read property "nip" on array
+in APPPATH\Views\admin\dataguru\index.php on line 44.
+ 1 APPPATH\Views\admin\dataguru\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nip" on array', 'APPPATH\\Views\\admin\\dataguru\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dataguru\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/dataguru/index', [], true)
+ 5 APPPATH\Controllers\GuruController.php(21): view('admin/dataguru/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\GuruController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 03:39:42 --> Attempt to read property "nip" on array
+in APPPATH\Views\admin\dataguru\index.php on line 44.
+ 1 APPPATH\Views\admin\dataguru\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nip" on array', 'APPPATH\\Views\\admin\\dataguru\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dataguru\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/dataguru/index', [], true)
+ 5 APPPATH\Controllers\GuruController.php(21): view('admin/dataguru/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\GuruController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 03:40:09 --> Attempt to read property "nama_guru" on array
+in APPPATH\Views\admin\dataguru\index.php on line 45.
+ 1 APPPATH\Views\admin\dataguru\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_guru" on array', 'APPPATH\\Views\\admin\\dataguru\\index.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dataguru\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/dataguru/index', [], true)
+ 5 APPPATH\Controllers\GuruController.php(21): view('admin/dataguru/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\GuruController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuruController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 18:38:19 --> mysqli_sql_exception: Table 'db_tapos.wali' doesn't exist in D:\xampp\htdocs\buku_pantau_web\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\buku_pantau_web\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `siswa`....', 0)
+#1 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`....')
+#2 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`....')
+#3 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`....', Array, false)
+#4 D:\xampp\htdocs\buku_pantau_web\app\Models\Siswa.php(19): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\buku_pantau_web\app\Controllers\SiswaController.php(20): App\Models\Siswa->get_data()
+#6 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(925): App\Controllers\SiswaController->index()
+#7 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+#8 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\buku_pantau_web\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\buku_pantau_web\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-16 18:38:19 --> Table 'db_tapos.wali' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `siswa`.*, `wali`.`nama_wali` AS `nama_wali`
+FROM `siswa`
+LEFT JOIN `wali` ON `wali`.`id_wali` = `siswa`.`id_wali`
+ORDER BY `siswa`.`id_siswa` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `wali`.`nama_wali` AS `nama_wali`
+FROM `siswa`
+LEFT JOIN `wali` ON `wali`.`id_wali` = `siswa`.`id_wali`
+ORDER BY `siswa`.`id_siswa` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `wali`.`nama_wali` AS `nama_wali`
+FROM `siswa`
+LEFT JOIN `wali` ON `wali`.`id_wali` = `siswa`.`id_wali`
+ORDER BY `siswa`.`id_siswa` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `wali`.`nama_wali` AS `nama_wali`
+FROM `siswa`
+LEFT JOIN `wali` ON `wali`.`id_wali` = `siswa`.`id_wali`
+ORDER BY `siswa`.`id_siswa` DESC', [], false)
+ 5 APPPATH\Models\Siswa.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SiswaController.php(20): App\Models\Siswa->get_data()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\SiswaController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 18:39:00 --> mysqli_sql_exception: Table 'db_tapos.wali' doesn't exist in D:\xampp\htdocs\buku_pantau_web\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\buku_pantau_web\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `siswa`....', 0)
+#1 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`....')
+#2 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`....')
+#3 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`....', Array, false)
+#4 D:\xampp\htdocs\buku_pantau_web\app\Models\Siswa.php(19): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\buku_pantau_web\app\Controllers\SiswaController.php(20): App\Models\Siswa->get_data()
+#6 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(925): App\Controllers\SiswaController->index()
+#7 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+#8 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\buku_pantau_web\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\buku_pantau_web\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-16 18:39:00 --> Table 'db_tapos.wali' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `siswa`.*, `wali_murid`.`nama_wali` AS `nama_wali`
+FROM `siswa`
+LEFT JOIN `wali` ON `wali_murid`.`id_wali` = `siswa`.`id_wali`
+ORDER BY `siswa`.`id_siswa` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `wali_murid`.`nama_wali` AS `nama_wali`
+FROM `siswa`
+LEFT JOIN `wali` ON `wali_murid`.`id_wali` = `siswa`.`id_wali`
+ORDER BY `siswa`.`id_siswa` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `wali_murid`.`nama_wali` AS `nama_wali`
+FROM `siswa`
+LEFT JOIN `wali` ON `wali_murid`.`id_wali` = `siswa`.`id_wali`
+ORDER BY `siswa`.`id_siswa` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `wali_murid`.`nama_wali` AS `nama_wali`
+FROM `siswa`
+LEFT JOIN `wali` ON `wali_murid`.`id_wali` = `siswa`.`id_wali`
+ORDER BY `siswa`.`id_siswa` DESC', [], false)
+ 5 APPPATH\Models\Siswa.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SiswaController.php(20): App\Models\Siswa->get_data()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\SiswaController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 18:39:34 --> mysqli_sql_exception: Unknown column 'wali_murid.nama_wali' in 'field list' in D:\xampp\htdocs\buku_pantau_web\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\buku_pantau_web\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `siswa`....', 0)
+#1 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`....')
+#2 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`....')
+#3 D:\xampp\htdocs\buku_pantau_web\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`....', Array, false)
+#4 D:\xampp\htdocs\buku_pantau_web\app\Models\Siswa.php(19): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\buku_pantau_web\app\Controllers\SiswaController.php(20): App\Models\Siswa->get_data()
+#6 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(925): App\Controllers\SiswaController->index()
+#7 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+#8 D:\xampp\htdocs\buku_pantau_web\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\buku_pantau_web\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\buku_pantau_web\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-16 18:39:34 --> Unknown column 'wali_murid.nama_wali' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `siswa`.*, `wali_murid`.`nama_wali` AS `nama_wali`
+FROM `siswa`
+LEFT JOIN `wali_murid` ON `wali_murid`.`id_wali` = `siswa`.`id_wali`
+ORDER BY `siswa`.`id_siswa` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `wali_murid`.`nama_wali` AS `nama_wali`
+FROM `siswa`
+LEFT JOIN `wali_murid` ON `wali_murid`.`id_wali` = `siswa`.`id_wali`
+ORDER BY `siswa`.`id_siswa` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `wali_murid`.`nama_wali` AS `nama_wali`
+FROM `siswa`
+LEFT JOIN `wali_murid` ON `wali_murid`.`id_wali` = `siswa`.`id_wali`
+ORDER BY `siswa`.`id_siswa` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `wali_murid`.`nama_wali` AS `nama_wali`
+FROM `siswa`
+LEFT JOIN `wali_murid` ON `wali_murid`.`id_wali` = `siswa`.`id_wali`
+ORDER BY `siswa`.`id_siswa` DESC', [], false)
+ 5 APPPATH\Models\Siswa.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SiswaController.php(20): App\Models\Siswa->get_data()
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\SiswaController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 19:02:42 --> Undefined array key "nama_kegiatan"
+in APPPATH\Views\admin\datajadwal\index.php on line 39.
+ 1 APPPATH\Views\admin\datajadwal\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kegiatan"', 'APPPATH\\Views\\admin\\datajadwal\\index.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\datajadwal\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/datajadwal/index', [], true)
+ 5 APPPATH\Controllers\JadwalController.php(21): view('admin/datajadwal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\JadwalController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JadwalController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

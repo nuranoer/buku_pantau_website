@@ -1,0 +1,30 @@
+ERROR - 2023-01-03 22:19:19 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-01-03 22:19:19 --> 220 smtp.gmail.com ESMTP d18-20020a170903231200b001928c9d772bsm15589630plh.206 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [103.166.10.65]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d18-20020a170903231200b001928c9d772bsm15589630plh.206 - gsmtp
+
+ERROR - 2023-01-03 22:22:24 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-01-03 22:22:24 --> 220 smtp.gmail.com ESMTP j14-20020a170903024e00b001890cbd1ff1sm23198328plh.149 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [103.166.10.65]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials j14-20020a170903024e00b001890cbd1ff1sm23198328plh.149 - gsmtp
+
