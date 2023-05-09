@@ -26,6 +26,7 @@ class KegiatanController extends BaseController
     public function lihat($id_kegiatan)
     {
          $kegiatan = new Kegiatan();
+         
          $data['detail'] = $kegiatan->detail($id_kegiatan);
     
          //dd($data);
@@ -150,6 +151,14 @@ class KegiatanController extends BaseController
         }
         
         return redirect()->to('/kegiatan')->with('success', 'Berhasil menghapus data');
+    }
+
+    public function filterData()
+    {
+        $search = $this->request->getVar('search');
+        $data['kegiatan'] = $this->kegiatan->getDataBySiswa($search);
+    
+        return view('data', $data);
     }
 
 }

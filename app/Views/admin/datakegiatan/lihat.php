@@ -28,10 +28,7 @@
                                         <th>Nama Kegiatan</th>
                                         <td><?= $detail[0]['nama_kegiatan'] ?></td>
                                     </tr>
-                                    <tr>
-                                        <th>Tanggal</th>
-                                        <td><?= $detail[0]['tanggal'] ?></td>
-                                    </tr>
+
                                     <tr>
                                         <th>Waktu</th>
                                         <td><?= $detail[0]['waktu'] ?></td>
@@ -46,7 +43,7 @@
 
                             </div>
                         </div>
-                        <img src="<?= base_url('uploads/kegiatan/'.$detail[0]['foto']) ?>" height="500" width="100%" title="foto"></img>
+                        <img src="" />
                         <a href="<?= base_url('/kegiatan') ?>"
                                 class="btn mb-2 btn-outline-warning mr-1">Kembali</a>
 

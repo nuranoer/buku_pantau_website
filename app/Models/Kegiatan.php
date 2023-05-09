@@ -32,6 +32,17 @@ class Kegiatan extends Model
             ->orderBy($this->table.'.id_kegiatan', $id_kegiatan)->get()->getResultArray();
 
     }
+        
+    public function getDataBySiswa($search)
+    {
+        $query = $this->db->table('kegiatan')
+                        ->join('siswa', 'siswa.id_siswa = kegiatan.id_siswa')
+                        ->like('siswa.nama_siswa', $search)
+                        ->get();
+
+        return $query->getResultArray();
+    }
+    
 
 }
 ?>

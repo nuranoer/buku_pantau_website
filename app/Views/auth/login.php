@@ -29,7 +29,6 @@
                 <div class="brand-logo">
                   <img src="<?= base_url('assets') ?>/images/logo.svg">
                 </div>
-                <h4>Hello! let's get started</h4>
                 <h6 class="font-weight-light"><?=lang('Auth.loginTitle')?></h6>
 
                 <?= view('Myth\Auth\Views\_message_block') ?>
@@ -63,12 +62,9 @@
                       </div>
                   </div>
                   <div class="mt-3">
-                    <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">SIGN IN</button>
+                    <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" >SIGN IN</button>
                   </div>
-                  <div class="col mt-4">
-                      <button type="button" class="btn btn-block btn-google auth-form-btn">
-                        <i class="mdi mdi-google me-2"></i>Connect using Google </button>
-                  </div>
+
 
                   <?php if ($config->allowRemembering): ?>
 
@@ -78,11 +74,10 @@
                         <input type="checkbox" name="remember" class="form-check-input" <?php if (old('remember')) : ?> checked <?php endif ?>> Keep me signed in </label>
                     </div>
                     <?php endif; ?>
-                    <a href="#" class="auth-link text-black">Forgot password?</a>
+                    <div class="text-center mt-4 font-weight-light"> Don't have an account? <a href="/register" class="text-primary">Create</a>
+
                   </div>
 
-                  <div class="text-center mt-4 font-weight-light"> Don't have an account? <a href="/register" class="text-primary">Create</a>
-                  </div>
                 </form>
               </div>
             </div>
