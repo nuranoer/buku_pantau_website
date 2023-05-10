@@ -12,6 +12,52 @@
                 </ol>
               </nav>
             </div>
+            <div class="row">
+              <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                  <div class="col mb-4">
+                  <form action="<?= base_url('kegiatan/filterDatabyTanggal') ?>" method="get">
+                    <div class="form-group">
+                        <label for="tanggal_awal">Tanggal Awal:</label>
+                        <input type="date" class="form-control" name="tanggal_awal" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggal_akhir">Tanggal Akhir:</label>
+                        <input type="date" class="form-control" name="tanggal_akhir" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hari">Hari:</label>
+                        <input type="text" class="form-control" name="hari">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                </form>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Kegiatan</th>
+                            <th>Tanggal</th>
+                            <th>Hari</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($kegiatans as $index => $data) : ?>
+                            <tr>
+                                <td><?= $index + 1 ?></td>
+                                <td><?= $data['nama_kegiatan'] ?></td>
+                                <td><?= $data['tanggal'] ?></td>
+                                <td><?= $data['hari'] ?></td>
+                            </tr>
+                        <?php endforeach ?>
+                    </tbody>
+                </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div id="confirm-dialog" class="modal" tabindex="-1" role="dialog">
               <div class="modal-dialog" role="document">

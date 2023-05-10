@@ -161,5 +161,16 @@ class KegiatanController extends BaseController
         return view('data', $data);
     }
 
+    public function filterDatabyTanggal()
+    {
+        $tanggal_awal = $this->request->getGet('tanggal_awal');
+        $tanggal_akhir = $this->request->getGet('tanggal_akhir');
+        $hari = $this->request->getGet('hari');
+
+        $data['kegiatans'] = $this->kegiatan->getFilteredData($tanggal_awal, $tanggal_akhir, $hari);
+
+        return view('filter_data', $data);
+    }
+
 }
 ?>

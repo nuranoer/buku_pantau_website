@@ -42,6 +42,18 @@ class Kegiatan extends Model
 
         return $query->getResultArray();
     }
+
+    public function getFilteredData($tanggal_awal, $tanggal_akhir, $hari)
+    {
+        $builder = $this->db->table('kegiatan');
+        $builder->select('*');
+        $builder->join('jadwal', 'jadwal.id_jadwal = kegiatan.id_jadwal');
+        $builder->where('tanggal >=', $tanggal_awal);
+        $builder->where('tanggal <=', $tanggal_akhir);
+        $builder->like('hari', $hari);
+
+        return $builder->get()->getResultArray();
+    }
     
 
 }
