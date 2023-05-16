@@ -155,7 +155,7 @@ class KegiatanController extends BaseController
 
     public function filterData()
     {
-        $search = $this->request->getVar('search');
+        $search = $this->request->getVar('nama_siswa');
         $data['kegiatan'] = $this->kegiatan->getDataBySiswa($search);
     
         return view('data', $data);

@@ -74,6 +74,7 @@ $routes->get('/jadwal/delete/(:any)', 'JadwalController::delete/$1');
 
 //Laporan
 $routes->get('/laporansiswa', 'LaporanController::laporansiswa');
+$routes->get('/filterdata', 'KegiatanController::filterData');
 $routes->get('/laporanperminggu', 'LaporanController::laporanperminggu');
 
 /*

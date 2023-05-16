@@ -2,6 +2,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use DateTime;
 
 class Kegiatan extends Model
 {
@@ -20,6 +21,20 @@ class Kegiatan extends Model
             ->select('kegiatan.*, jadwal.hari AS hari')
             ->orderBy($this->table.'.id_kegiatan', 'DESC')->get()->getResultArray();
 
+    }
+
+    public function get_date()
+    {
+        $query = $this->db->query("SELECT waktu FROM kegiatan");
+        $results = $query->getResult();
+
+        foreach ($results as $result) {
+            $timestamp = $result->my_timestamp;
+            $datetime = DateTime::createFromFormat('U', $timestamp)->format('Y-m-d H:i:s');
+            $result->my_datetime = $datetime;
+        }
+
+        return $results;
     }
 
     public function detail($id_kegiatan)

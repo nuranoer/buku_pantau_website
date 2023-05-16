@@ -17,7 +17,7 @@
                 <div class="card">
                   <div class="card-body">
                   <div class="col mb-4">
-                    <form action="<?= base_url('KegiatanController/filterData') ?>" method="get">
+                    <form action="<?= base_url('/filterdata') ?>" method="get">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" name="search" placeholder="Cari nama siswa...">
                             <div class="input-group-append">

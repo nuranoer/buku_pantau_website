@@ -30,6 +30,10 @@
                                     </tr>
 
                                     <tr>
+                                        <th>Tanggal</th>
+                                        <td><?= $detail[0]['tanggal'] ?></td>
+                                    </tr>
+                                    <tr>
                                         <th>Waktu</th>
                                         <td><?= $detail[0]['waktu'] ?></td>
                                     </tr>
@@ -43,7 +47,7 @@
 
                             </div>
                         </div>
-                        <img src="" />
+                        <img src="<?php echo base_url('buku_pantau_andro/images/' .$detail[0]['foto']); ?>" alt="Gambar">
                         <a href="<?= base_url('/kegiatan') ?>"
                                 class="btn mb-2 btn-outline-warning mr-1">Kembali</a>
 

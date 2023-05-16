@@ -1,0 +1,24 @@
+CRITICAL - 2023-05-16 04:03:59 --> A non-numeric value encountered
+in APPPATH\Views\admin\datakegiatan\index.php on line 50.
+ 1 APPPATH\Views\admin\datakegiatan\index.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Views\\admin\\datakegiatan\\index.php', 50)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\datakegiatan\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/datakegiatan/index', [], true)
+ 5 APPPATH\Controllers\KegiatanController.php(23): view('admin/datakegiatan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\KegiatanController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KegiatanController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-16 04:04:46 --> A non-numeric value encountered
+in APPPATH\Views\admin\datakegiatan\index.php on line 51.
+ 1 APPPATH\Views\admin\datakegiatan\index.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Views\\admin\\datakegiatan\\index.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\datakegiatan\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/datakegiatan/index', [], true)
+ 5 APPPATH\Controllers\KegiatanController.php(23): view('admin/datakegiatan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\KegiatanController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KegiatanController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

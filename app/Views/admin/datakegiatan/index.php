@@ -47,7 +47,8 @@
                                     <tr>
                                         <td><?= $no++ ?></td>
                                         <td><?= $k['hari'] ?></td>
-                                        <td><?= $k['waktu'] ?></td>
+                                        <td><?= $k['tanggal']?></td>
+                                        <td><?= $k['waktu']?></td>
                                         <td><?= $k['nama_kegiatan'] ?></td>
                                         <td><?= $k['nama_guru'] ?></td>
                                         <td class = "d-flex justify-content-space-around ">
