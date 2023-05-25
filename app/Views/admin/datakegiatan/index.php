@@ -1,5 +1,10 @@
 <?= $this->extend('template/app'); ?>
 
+<link rel="stylesheet" href="<?= base_url('assets') ?>/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="<?= base_url('assets') ?>/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+<link rel="stylesheet" href="<?= base_url('assets') ?>/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+
 <?= $this->section('content'); ?>
 <div class="main-panel">
           <div class="content-wrapper">
@@ -27,7 +32,7 @@
                       </div>
 
                     </div>
-                    <table class="table table-bordered">
+                    <table id="example1" class="table table-bordered">
                       <thead>
                         <tr>
                           <th><center>No.</center></th>

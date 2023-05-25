@@ -26,10 +26,7 @@
           <div class="row flex-grow">
             <div class="col-lg-4 mx-auto">
               <div class="auth-form-light text-left p-5">
-                <div class="brand-logo">
-                  <img src="<?= base_url('assets') ?>/images/logo.svg">
-                </div>
-                <h6 class="font-weight-light"><?=lang('Auth.loginTitle')?></h6>
+                <h2 class="font-weight-bold"><?=lang('Auth.loginTitle')?></h2>
 
                 <?= view('Myth\Auth\Views\_message_block') ?>
 

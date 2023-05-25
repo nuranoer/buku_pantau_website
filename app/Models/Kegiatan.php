@@ -69,6 +69,19 @@ class Kegiatan extends Model
 
         return $builder->get()->getResultArray();
     }
+
+    public function laporan($namaSiswa)
+    {
+        $builder = $this->db->table('siswa');
+        $builder->select('siswa.id_siswa, siswa.nama_siswa, kegiatan.tanggal, wali_murid.nama_wali, guru.nama_guru, kegiatan.nama_kegiatan');
+        $builder->join('wali_murid', 'siswa.id_siswa = wali_murid.id_siswa');
+        $builder->join('kegiatan', 'guru.id_guru = kegiatan.id_guru');
+        $builder->join('guru', 'kegiatan.id_guru = guru.id_guru');
+        $builder->where('siswa.nama_siswa', $namaSiswa);
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
     
 
 }
