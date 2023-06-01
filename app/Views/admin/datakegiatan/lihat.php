@@ -47,7 +47,6 @@
 
                             </div>
                         </div>
-                        <img src="<?php echo base_url('buku_pantau_andro/images/' .$detail[0]['foto']); ?>" alt="Gambar">
                         <a href="<?= base_url('/kegiatan') ?>"
                                 class="btn mb-2 btn-outline-warning mr-1">Kembali</a>
 

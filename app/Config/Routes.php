@@ -58,10 +58,6 @@ $routes->get('/siswa/delete/(:any)', 'SiswaController::delete/$1');
 //Kegiatan
 $routes->get('/kegiatan', 'KegiatanController::index');
 $routes->get('kegiatan/lihat/(:any)', 'KegiatanController::lihat/$1');
-$routes->add('/kegiatan/new', 'KegiatanController::new');
-$routes->add('/kegiatan/save', 'KegiatanController::save');
-$routes->add('/kegiatan/edit/(:any)', 'KegiatanController::edit/$1');
-$routes->add('/kegiatan/update/(:any)', 'KegiatanController::update/$1');
 $routes->get('/kegiatan/delete/(:any)', 'KegiatanController::delete/$1');
 
 //Jadwal
@@ -72,10 +68,11 @@ $routes->add('/jadwal/edit/(:any)', 'JadwalController::edit/$1');
 $routes->add('/jadwal/update/(:any)', 'JadwalController::update/$1');
 $routes->get('/jadwal/delete/(:any)', 'JadwalController::delete/$1');
 
-//Laporan
-$routes->get('/laporansiswa', 'LaporanController::laporansiswa');
-$routes->get('/filterdata', 'KegiatanController::filterData');
-$routes->get('/laporanperminggu', 'LaporanController::laporanperminggu');
+//Absensi
+$routes->get('/absensi', 'AbsensiController::index');
+$routes->get('absensi/lihat/(:any)', 'AbsensiController::lihat/$1');
+$routes->get('/absensi/delete/(:any)', 'AbsensiController::delete/$1');
+
 
 /*
  * --------------------------------------------------------------------
