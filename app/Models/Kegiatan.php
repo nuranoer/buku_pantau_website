@@ -19,7 +19,7 @@ class Kegiatan extends Model
             ->join('jadwal', 'jadwal.id_jadwal = kegiatan.id_jadwal', 'left')
             ->select('kegiatan.*, guru.nama_guru AS nama_guru')
             ->select('kegiatan.*, jadwal.hari AS hari')
-            ->orderBy($this->table.'.id_kegiatan', 'DESC')->get()->getResultArray();
+            ->orderBy($this->table.'.tanggal', 'DESC')->get()->getResultArray();
 
     }
 

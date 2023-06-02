@@ -73,6 +73,10 @@ $routes->get('/absensi', 'AbsensiController::index');
 $routes->get('absensi/lihat/(:any)', 'AbsensiController::lihat/$1');
 $routes->get('/absensi/delete/(:any)', 'AbsensiController::delete/$1');
 
+//laporan
+$routes->get('/laporan', 'LaporanController::index');
+$routes->post('/laporan/export', 'LaporanController::export');
+
 
 /*
  * --------------------------------------------------------------------

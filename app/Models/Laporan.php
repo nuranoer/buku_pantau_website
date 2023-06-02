@@ -5,25 +5,28 @@ use CodeIgniter\Model;
 
 class Laporan extends Model
 {
-    protected $table = 'laporan';
-    protected $primaryKey = 'id_laporan';
+    protected $table = 'kegiatan';
+    protected $primaryKey = 'id_kegiatan';
 
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['tanggal', 'id_jadwal', 'id_siswa', 'id_kegiatan', 'keterangan'];
+    protected $allowedFields = ['nama_kegiatan', 'id_jadwal', 'tanggal', 'waktu', 'foto', 'id_guru'];
 
-    public function get_data()
+    public function getLaporan($dari, $sampai)
     {
-        return $this->db->table($this->table)
-            ->join('siswa', 'siswa.id_siswa = '.$this->table.'.id_kegiatan', 'left')
-            ->join('kegiatan', 'kegiatan.id_kegiatan = laporan.id_kegiatan', 'left')
-            ->join('jadwal', 'jadwal.id_jadwal = laporan.id_jadwal', 'left')
-            ->select('laporan.*, siswa.nama_siswa AS nama_siswa')
-            ->select('laporan.*, siswa.alamat_siswa AS alamat_siswa')
-            ->select('laporan.*, kegiatan.nama_kegiatan AS nama_kegiatan')
-            ->select('laporan.*, jadwal.hari AS hari')
-            ->orderBy($this->table.'.id_laporan', 'DESC')->get()->getResultArray();
-
+        return $this->table($this->table)
+            ->join('guru', 'guru.id_guru = '.$this->table.'.id_guru', 'left')
+            ->join('jadwal', 'jadwal.id_jadwal = '.$this->table.'.id_jadwal', 'left')
+            ->select('kegiatan.*, guru.nama_guru AS nama_guru, jadwal.hari AS hari')
+            ->where('tanggal >=', $dari)
+            ->where('tanggal <=', $sampai)
+            ->get()
+            ->getResultArray();
     }
+        
+    
+    
+
+
 
 }
 ?>

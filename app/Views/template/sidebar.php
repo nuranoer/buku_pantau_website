@@ -55,6 +55,12 @@
                 <i class="mdi mdi-crosshairs-gps menu-icon"></i>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/laporan">
+                <span class="menu-title">Data Laporan</span>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+              </a>
+            </li>
 
             <!-- <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">

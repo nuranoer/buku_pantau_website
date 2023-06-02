@@ -15,7 +15,7 @@ class Guru extends Model
         return $this->db->table($this->table)
             ->join('jadwal', 'jadwal.id_jadwal = '.$this->table.'.id_jadwal', 'left')
             ->select('guru.*, jadwal.hari AS hari')
-            ->orderBy($this->table.'.id_guru', 'DESC')->get()->getResultObject();
+            ->orderBy($this->table.'.id_guru', 'ASC')->get()->getResultObject();
     }
 
     public function detail($id_guru)

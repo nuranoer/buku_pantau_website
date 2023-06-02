@@ -17,7 +17,7 @@ class Absensi extends Model
         ->join('siswa', 'siswa.id_siswa = ' . $this->table . '.id_siswa', 'left')
         ->select($this->table . '.id_siswa, COUNT(' . $this->table . '.kehadiran) as jumlah_kehadiran, siswa.nama_siswa AS nama_siswa')
         ->groupBy($this->table . '.id_siswa')
-        ->orderBy($this->table . '.id_siswa', 'DESC')
+        ->orderBy($this->table . '.id_siswa', 'ASC')
         ->get();
 
         return $builder->getResultArray();

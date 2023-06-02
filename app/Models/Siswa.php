@@ -16,7 +16,7 @@ class Siswa extends Model
         return $this->db->table($this->table)
             ->join('wali_murid', 'wali_murid.id_wali = '.$this->table.'.id_wali', 'left')
             ->select('siswa.*, wali_murid.nama_wali AS nama_wali')
-            ->orderBy($this->table.'.id_siswa', 'DESC')->get()->getResultArray();
+            ->orderBy($this->table.'.id_siswa', 'ASC')->get()->getResultArray();
 
     }
     public function detail($id_siswa)
