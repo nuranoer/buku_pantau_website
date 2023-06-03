@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\User;
 use App\Models\Guru;
 use App\Models\Siswa;
 use App\Models\Kegiatan;
@@ -11,7 +12,11 @@ class PageController extends BaseController
 {
     public function index()
     {
-        return view('template/app');
+        $userModel = new User();
+        $userId = 1; // Ganti dengan ID pengguna yang sesuai
+        $fullName = $userModel->getFullName($userId);
+
+        return view('template/app', ['fullName' => $fullName]);
     }
 
     public function dashboard()
