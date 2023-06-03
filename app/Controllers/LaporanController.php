@@ -39,9 +39,9 @@ class LaporanController extends BaseController
 
     public function export()
     {
-        $dari = $this->request->getGet('dari');
-        $sampai = $this->request->getGet('sampai');
-    
+        $dari = $this->request->getPost('dari');
+        $sampai = $this->request->getPost('sampai');
+
         $model = new Laporan();
         $laporan = $model->getLaporan($dari, $sampai);
     
@@ -61,12 +61,11 @@ class LaporanController extends BaseController
         $nomor = 1;
         foreach ($laporan as $data) {
             $sheet->setCellValue('A' . $kolom, $nomor);
-            $sheet->setCellValue('B' . $kolom, $data->nama_kegiatan);
-            $sheet->setCellValue('C' . $kolom, $data->hari);
-            $sheet->setCellValue('D' . $kolom, $data->tanggal);
-            $sheet->setCellValue('E' . $kolom, $data->waktu);
-            $sheet->setCellValue('F' . $kolom, $data->nama_guru);
-    
+            $sheet->setCellValue('B' . $kolom, $data['nama_kegiatan']);
+            $sheet->setCellValue('C' . $kolom, $data['hari']);
+            $sheet->setCellValue('D' . $kolom, $data['tanggal']);
+            $sheet->setCellValue('E' . $kolom, $data['waktu']);
+            $sheet->setCellValue('F' . $kolom, $data['nama_guru']);
             $kolom++;
             $nomor++;
         }

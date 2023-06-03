@@ -1,4 +1,53 @@
-ERROR - 2023-06-02 03:45:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+ERROR - 2023-06-02 20:23:16 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND `tanggal` <' at line 6 in D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiata...', 0)
+#1 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kegiata...')
+#2 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kegiata...')
+#3 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kegiata...', Array, false)
+#4 D:\xampp\htdocs\buku_pantau_website\system\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\buku_pantau_website\app\Models\Laporan.php(22): CodeIgniter\Model->__call('get', Array)
+#6 D:\xampp\htdocs\buku_pantau_website\app\Controllers\LaporanController.php(46): App\Models\Laporan->getLaporan(NULL, NULL)
+#7 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+#8 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#9 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\buku_pantau_website\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\buku_pantau_website\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-02 20:23:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND `tanggal` <' at line 6
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiatan`.*, `guru`.`nama_guru` AS `nama_guru`, `jadwal`.`hari` AS `hari`
+FROM `kegiatan`
+LEFT JOIN `guru` ON `guru`.`id_guru` = `kegiatan`.`id_guru`
+LEFT JOIN `jadwal` ON `jadwal`.`id_jadwal` = `kegiatan`.`id_jadwal`
+WHERE `tanggal` >
+AND `tanggal` <', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kegiatan`.*, `guru`.`nama_guru` AS `nama_guru`, `jadwal`.`hari` AS `hari`
+FROM `kegiatan`
+LEFT JOIN `guru` ON `guru`.`id_guru` = `kegiatan`.`id_guru`
+LEFT JOIN `jadwal` ON `jadwal`.`id_jadwal` = `kegiatan`.`id_jadwal`
+WHERE `tanggal` >
+AND `tanggal` <')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kegiatan`.*, `guru`.`nama_guru` AS `nama_guru`, `jadwal`.`hari` AS `hari`
+FROM `kegiatan`
+LEFT JOIN `guru` ON `guru`.`id_guru` = `kegiatan`.`id_guru`
+LEFT JOIN `jadwal` ON `jadwal`.`id_jadwal` = `kegiatan`.`id_jadwal`
+WHERE `tanggal` >
+AND `tanggal` <')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kegiatan`.*, `guru`.`nama_guru` AS `nama_guru`, `jadwal`.`hari` AS `hari`
+FROM `kegiatan`
+LEFT JOIN `guru` ON `guru`.`id_guru` = `kegiatan`.`id_guru`
+LEFT JOIN `jadwal` ON `jadwal`.`id_jadwal` = `kegiatan`.`id_jadwal`
+WHERE `tanggal` >
+AND `tanggal` <', [], false)
+ 5 SYSTEMPATH\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\Laporan.php(22): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\LaporanController.php(46): App\Models\Laporan->getLaporan(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-02 20:23:53 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
 AND `tanggal` < IS NULL' at line 5 in D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php:292
 Stack trace:
 #0 D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiata...', 0)
@@ -14,7 +63,7 @@ Stack trace:
 #10 D:\xampp\htdocs\buku_pantau_website\public\index.php(67): CodeIgniter\CodeIgniter->run()
 #11 D:\xampp\htdocs\buku_pantau_website\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
 #12 {main}
-CRITICAL - 2023-06-02 03:45:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+CRITICAL - 2023-06-02 20:23:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
 AND `tanggal` < IS NULL' at line 5
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
  1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiatan`.*, `guru`.`nama_guru` AS `nama_guru`, `jadwal`.`hari` AS `hari`
@@ -49,3 +98,254 @@ AND `tanggal` < IS NULL', [], false)
 10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-02 20:25:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `tanggal` < IS NULL' at line 5 in D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiata...', 0)
+#1 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kegiata...')
+#2 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kegiata...')
+#3 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kegiata...', Array, false)
+#4 D:\xampp\htdocs\buku_pantau_website\system\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\buku_pantau_website\app\Models\Laporan.php(22): CodeIgniter\Model->__call('get', Array)
+#6 D:\xampp\htdocs\buku_pantau_website\app\Controllers\LaporanController.php(46): App\Models\Laporan->getLaporan(NULL, NULL)
+#7 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+#8 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#9 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\buku_pantau_website\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\buku_pantau_website\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-02 20:25:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `tanggal` < IS NULL' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiatan`.*, `guru`.`nama_guru` AS `nama_guru`, `jadwal`.`hari` AS `hari`
+FROM `kegiatan`
+LEFT JOIN `guru` ON `guru`.`id_guru` = `kegiatan`.`id_guru`
+LEFT JOIN `jadwal` ON `jadwal`.`id_jadwal` = `kegiatan`.`id_jadwal`
+WHERE `tanggal` > IS NULL
+AND `tanggal` < IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kegiatan`.*, `guru`.`nama_guru` AS `nama_guru`, `jadwal`.`hari` AS `hari`
+FROM `kegiatan`
+LEFT JOIN `guru` ON `guru`.`id_guru` = `kegiatan`.`id_guru`
+LEFT JOIN `jadwal` ON `jadwal`.`id_jadwal` = `kegiatan`.`id_jadwal`
+WHERE `tanggal` > IS NULL
+AND `tanggal` < IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kegiatan`.*, `guru`.`nama_guru` AS `nama_guru`, `jadwal`.`hari` AS `hari`
+FROM `kegiatan`
+LEFT JOIN `guru` ON `guru`.`id_guru` = `kegiatan`.`id_guru`
+LEFT JOIN `jadwal` ON `jadwal`.`id_jadwal` = `kegiatan`.`id_jadwal`
+WHERE `tanggal` > IS NULL
+AND `tanggal` < IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kegiatan`.*, `guru`.`nama_guru` AS `nama_guru`, `jadwal`.`hari` AS `hari`
+FROM `kegiatan`
+LEFT JOIN `guru` ON `guru`.`id_guru` = `kegiatan`.`id_guru`
+LEFT JOIN `jadwal` ON `jadwal`.`id_jadwal` = `kegiatan`.`id_jadwal`
+WHERE `tanggal` > IS NULL
+AND `tanggal` < IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\Laporan.php(22): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\LaporanController.php(46): App\Models\Laporan->getLaporan(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-02 20:36:20 --> mysqli_sql_exception: Unknown column 'guru.nama_guru' in 'field list' in D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiata...', 0)
+#1 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kegiata...')
+#2 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kegiata...')
+#3 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kegiata...', Array, false)
+#4 D:\xampp\htdocs\buku_pantau_website\system\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\buku_pantau_website\app\Models\Laporan.php(17): CodeIgniter\Model->__call('get', Array)
+#6 D:\xampp\htdocs\buku_pantau_website\app\Controllers\LaporanController.php(46): App\Models\Laporan->getLaporan(NULL, NULL)
+#7 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+#8 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#9 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\buku_pantau_website\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\buku_pantau_website\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-02 20:36:20 --> Unknown column 'guru.nama_guru' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`', [], false)
+ 5 SYSTEMPATH\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\Laporan.php(17): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\LaporanController.php(46): App\Models\Laporan->getLaporan(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-02 20:36:56 --> mysqli_sql_exception: Not unique table/alias: 'kegiatan' in D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiata...', 0)
+#1 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kegiata...')
+#2 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kegiata...')
+#3 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kegiata...', Array, false)
+#4 D:\xampp\htdocs\buku_pantau_website\system\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\buku_pantau_website\app\Models\Laporan.php(18): CodeIgniter\Model->__call('get', Array)
+#6 D:\xampp\htdocs\buku_pantau_website\app\Controllers\LaporanController.php(46): App\Models\Laporan->getLaporan(NULL, NULL)
+#7 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+#8 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#9 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\buku_pantau_website\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\buku_pantau_website\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-02 20:36:56 --> Not unique table/alias: 'kegiatan'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`, `kegiatan`, `guru`, `jadwal`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`, `kegiatan`, `guru`, `jadwal`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`, `kegiatan`, `guru`, `jadwal`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`, `kegiatan`, `guru`, `jadwal`', [], false)
+ 5 SYSTEMPATH\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\Laporan.php(18): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\LaporanController.php(46): App\Models\Laporan->getLaporan(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-02 20:39:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `kegiatan`.`tanggal` < IS NULL' at line 5 in D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiata...', 0)
+#1 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kegiata...')
+#2 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kegiata...')
+#3 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kegiata...', Array, false)
+#4 D:\xampp\htdocs\buku_pantau_website\system\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\buku_pantau_website\app\Models\Laporan.php(22): CodeIgniter\Model->__call('get', Array)
+#6 D:\xampp\htdocs\buku_pantau_website\app\Controllers\LaporanController.php(46): App\Models\Laporan->getLaporan(NULL, NULL)
+#7 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+#8 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#9 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\buku_pantau_website\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\buku_pantau_website\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-02 20:39:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `kegiatan`.`tanggal` < IS NULL' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`, `guru`, `jadwal`
+WHERE `kegiatan`.`id_guru` = `guru`.`id_guru`
+AND `kegiatan`.`id_jadwal` = `jadwal`.`id_jadwal`
+AND `kegiatan`.`tanggal` > IS NULL
+AND `kegiatan`.`tanggal` < IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`, `guru`, `jadwal`
+WHERE `kegiatan`.`id_guru` = `guru`.`id_guru`
+AND `kegiatan`.`id_jadwal` = `jadwal`.`id_jadwal`
+AND `kegiatan`.`tanggal` > IS NULL
+AND `kegiatan`.`tanggal` < IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`, `guru`, `jadwal`
+WHERE `kegiatan`.`id_guru` = `guru`.`id_guru`
+AND `kegiatan`.`id_jadwal` = `jadwal`.`id_jadwal`
+AND `kegiatan`.`tanggal` > IS NULL
+AND `kegiatan`.`tanggal` < IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`, `guru`, `jadwal`
+WHERE `kegiatan`.`id_guru` = `guru`.`id_guru`
+AND `kegiatan`.`id_jadwal` = `jadwal`.`id_jadwal`
+AND `kegiatan`.`tanggal` > IS NULL
+AND `kegiatan`.`tanggal` < IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\Laporan.php(22): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\LaporanController.php(46): App\Models\Laporan->getLaporan(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-02 20:39:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `kegiatan`.`tanggal` < IS NULL' at line 5 in D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\buku_pantau_website\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiata...', 0)
+#1 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kegiata...')
+#2 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kegiata...')
+#3 D:\xampp\htdocs\buku_pantau_website\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kegiata...', Array, false)
+#4 D:\xampp\htdocs\buku_pantau_website\system\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\buku_pantau_website\app\Models\Laporan.php(22): CodeIgniter\Model->__call('get', Array)
+#6 D:\xampp\htdocs\buku_pantau_website\app\Controllers\LaporanController.php(46): App\Models\Laporan->getLaporan(NULL, NULL)
+#7 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+#8 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#9 D:\xampp\htdocs\buku_pantau_website\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\buku_pantau_website\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\buku_pantau_website\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-02 20:39:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `kegiatan`.`tanggal` < IS NULL' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`, `guru`, `jadwal`
+WHERE `kegiatan`.`id_guru` = `guru`.`id_guru`
+AND `kegiatan`.`id_jadwal` = `jadwal`.`id_jadwal`
+AND `kegiatan`.`tanggal` > IS NULL
+AND `kegiatan`.`tanggal` < IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`, `guru`, `jadwal`
+WHERE `kegiatan`.`id_guru` = `guru`.`id_guru`
+AND `kegiatan`.`id_jadwal` = `jadwal`.`id_jadwal`
+AND `kegiatan`.`tanggal` > IS NULL
+AND `kegiatan`.`tanggal` < IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`, `guru`, `jadwal`
+WHERE `kegiatan`.`id_guru` = `guru`.`id_guru`
+AND `kegiatan`.`id_jadwal` = `jadwal`.`id_jadwal`
+AND `kegiatan`.`tanggal` > IS NULL
+AND `kegiatan`.`tanggal` < IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kegiatan`.`nama_kegiatan`, `kegiatan`.`tanggal`, `guru`.`nama_guru`, `jadwal`.`hari`
+FROM `kegiatan`, `guru`, `jadwal`
+WHERE `kegiatan`.`id_guru` = `guru`.`id_guru`
+AND `kegiatan`.`id_jadwal` = `jadwal`.`id_jadwal`
+AND `kegiatan`.`tanggal` > IS NULL
+AND `kegiatan`.`tanggal` < IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\Laporan.php(22): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\LaporanController.php(46): App\Models\Laporan->getLaporan(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-02 20:47:13 --> Attempt to read property "nama_kegiatan" on array
+in APPPATH\Controllers\LaporanController.php on line 64.
+ 1 APPPATH\Controllers\LaporanController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_kegiatan" on array', 'APPPATH\\Controllers\\LaporanController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-02 20:48:12 --> Undefined property: mysqli::$nama_kegiatan
+in APPPATH\Controllers\LaporanController.php on line 64.
+ 1 APPPATH\Controllers\LaporanController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nama_kegiatan', 'APPPATH\\Controllers\\LaporanController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-02 20:48:35 --> Attempt to read property "hari" on array
+in APPPATH\Controllers\LaporanController.php on line 65.
+ 1 APPPATH\Controllers\LaporanController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "hari" on array', 'APPPATH\\Controllers\\LaporanController.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-02 20:49:15 --> Undefined array key "waktu"
+in APPPATH\Controllers\LaporanController.php on line 67.
+ 1 APPPATH\Controllers\LaporanController.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "waktu"', 'APPPATH\\Controllers\\LaporanController.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\LaporanController->export()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

@@ -13,12 +13,12 @@ class Laporan extends Model
 
     public function getLaporan($dari, $sampai)
     {
-        return $this->table($this->table)
-            ->join('guru', 'guru.id_guru = '.$this->table.'.id_guru', 'left')
-            ->join('jadwal', 'jadwal.id_jadwal = '.$this->table.'.id_jadwal', 'left')
-            ->select('kegiatan.*, guru.nama_guru AS nama_guru, jadwal.hari AS hari')
-            ->where('tanggal >=', $dari)
-            ->where('tanggal <=', $sampai)
+        return $this->select('kegiatan.nama_kegiatan, kegiatan.tanggal, kegiatan.waktu, guru.nama_guru, jadwal.hari')
+            ->from('guru,jadwal')
+            ->where('kegiatan.id_guru = guru.id_guru')
+            ->where('kegiatan.id_jadwal = jadwal.id_jadwal')
+            ->where('kegiatan.tanggal >=', $dari)
+            ->where('kegiatan.tanggal <=', $sampai)
             ->get()
             ->getResultArray();
     }
