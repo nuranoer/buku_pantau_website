@@ -13,7 +13,8 @@
         "laminas/laminas-escaper": "^2.9",
         "psr/log": "^1.1",
         "myth/auth": "^1.2",
-        "phpoffice/phpspreadsheet": "*"
+        "phpoffice/phpspreadsheet": "*",
+        "dompdf/dompdf": "^2.0"
     },
     "require-dev": {
         "codeigniter/coding-standard": "^1.5",

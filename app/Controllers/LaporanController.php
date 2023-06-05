@@ -3,8 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Laporan;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use Dompdf\Dompdf;
 
 class LaporanController extends BaseController
 {
@@ -35,50 +34,38 @@ class LaporanController extends BaseController
             return view('admin/datalaporan/laporankegiatan', $data);
         }
     }
-    
 
-    public function export()
+    public function printPDF()
     {
-        $dari = $this->request->getPost('dari');
-        $sampai = $this->request->getPost('sampai');
+        // Membuat objek Dompdf
+        $dompdf = new Dompdf();
 
+        // Mengatur path dasar untuk gambar
+        $dompdf->setBasePath(base_url('assets/images'));
+
+        // Mengambil tanggal dari input form
+        $dari = $this->request->getPost('dari'); // Ambil nilai dari input "dari" pada form
+        $sampai = $this->request->getPost('sampai'); // Ambil nilai dari input "sampai" pada form
+
+        // Mengambil data dari database menggunakan model
         $model = new Laporan();
-        $laporan = $model->getLaporan($dari, $sampai);
-    
-        $spreadsheet = new Spreadsheet();
-        $sheet = $spreadsheet->getActiveSheet();
-    
-        // Set judul kolom
-        $sheet->setCellValue('A1', 'No');
-        $sheet->setCellValue('B1', 'Nama Kegiatan');
-        $sheet->setCellValue('C1', 'Hari');
-        $sheet->setCellValue('D1', 'Tanggal');
-        $sheet->setCellValue('E1', 'Waktu');
-        $sheet->setCellValue('F1', 'Nama Guru');
-    
-        // Set data laporan
-        $kolom = 2;
-        $nomor = 1;
-        foreach ($laporan as $data) {
-            $sheet->setCellValue('A' . $kolom, $nomor);
-            $sheet->setCellValue('B' . $kolom, $data['nama_kegiatan']);
-            $sheet->setCellValue('C' . $kolom, $data['hari']);
-            $sheet->setCellValue('D' . $kolom, $data['tanggal']);
-            $sheet->setCellValue('E' . $kolom, $data['waktu']);
-            $sheet->setCellValue('F' . $kolom, $data['nama_guru']);
-            $kolom++;
-            $nomor++;
-        }
-    
-        // Mengeksport ke file
-        $writer = new Xlsx($spreadsheet);
-        $filename = 'Laporan Kegiatan.xlsx';
-    
-        // Mengatur header dan output file
-        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header('Content-Disposition: attachment;filename="' . $filename . '"');
-        header('Cache-Control: max-age=0');
-    
-        $writer->save('php://output');
+        $laporan = $model->getLaporan($dari, $sampai); // Ubah metode ini sesuai dengan kebutuhan Anda
+
+        // Menggabungkan kop dan informasi data ke dalam variabel "$html"
+        $html = view('admin/datalaporan/laporankegiatan', ['laporan' => $laporan]);
+
+        // Memuat konten HTML ke Dompdf
+        $dompdf->loadHtml($html);
+
+        // (Opsional) Mengatur ukuran dan orientasi halaman PDF
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Merender konten HTML menjadi PDF
+        $dompdf->render();
+
+        // Mengirimkan hasil PDF ke browser untuk ditampilkan atau didownload
+        $dompdf->stream('Laporan Kegiatan.pdf', ['Attachment' => false]);
     }
+    
+
 }
