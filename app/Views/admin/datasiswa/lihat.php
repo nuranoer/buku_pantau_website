@@ -21,7 +21,7 @@
                             <div class="table">
                                 <table class="table table-bordered">
                                     <tr>
-                                        <th>NIP</th>
+                                        <th>Nomor Induk</th>
                                         <td><?= $detail[0]['nomor_induk'] ?></td>
                                     </tr>
                                     <tr>
@@ -33,19 +33,19 @@
                                         <td><?= $detail[0]['alamat_siswa'] ?></td>
                                     </tr>
                                     <tr>
-                                        <th>Jenis Kelamin</th>
+                                        <th>Tempat Lahir</th>
                                         <td><?= $detail[0]['tempat_lahir'] ?></td>
                                     </tr>
                                     <tr>
-                                        <th>Agama</th>
+                                        <th>Tanggal Lahir</th>
                                         <td><?= $detail[0]['tanggal_lahir'] ?></td>
                                     </tr>
                                     <tr>
-                                        <th>No HP</th>
+                                        <th>Jenis Kelamin</th>
                                         <td><?= $detail[0]['jenis_kelamin'] ?></td>
                                     </tr>
                                     <tr>
-                                        <th>Status</th>
+                                        <th>Orang Tua/Wali</th>
                                         <td><?= $detail[0]['nama_wali'] ?></td>
                                     </tr>
 

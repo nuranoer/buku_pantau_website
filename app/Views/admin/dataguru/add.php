@@ -51,6 +51,10 @@
                         <input type="text" class="form-control" name="nip" value="<?= old('nip') ?>" placeholder="NIP">
                       </div>
                       <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="text" class="form-control" name="password" value="<?= old('password') ?>" placeholder="Password">
+                      </div>
+                      <div class="form-group">
                         <label for="nama_guru">Nama</label>
                         <input type="text" class="form-control" name="nama_guru" value="<?= old('nama_guru') ?>" placeholder="Nama">
                       </div>

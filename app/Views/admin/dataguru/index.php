@@ -33,7 +33,6 @@
                           <th><center> No.</center></th>
                           <th><center>NIP</center></th>
                           <th><center>Nama</center></th>
-                          <th><center>Alamat</center></th>
                           <th><center>No.Hp</center></th>
                           <th><center>Jadwal Mengajar</center></th>
                           <th><center>Aksi</center></th>
@@ -48,7 +47,6 @@
                                         <td><?= $no++ ?></td>
                                         <td><?= $g->nip ?></td>
                                         <td><?= $g->nama_guru ?></td>
-                                        <td><?= $g->alamat_guru ?></td>
                                         <td><?= $g->no_hp ?></td>
                                         <td><?= $g->hari ?></td>
                                         <td class = "d-flex justify-content  ">

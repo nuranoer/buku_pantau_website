@@ -37,12 +37,6 @@ class LaporanController extends BaseController
 
     public function printPDF()
     {
-        // Membuat objek Dompdf
-        $dompdf = new Dompdf();
-
-        // Mengatur path dasar untuk gambar
-        $dompdf->setBasePath(base_url('assets/images'));
-
         // Mengambil tanggal dari input form
         $dari = $this->request->getPost('dari'); // Ambil nilai dari input "dari" pada form
         $sampai = $this->request->getPost('sampai'); // Ambil nilai dari input "sampai" pada form
@@ -53,6 +47,9 @@ class LaporanController extends BaseController
 
         // Menggabungkan kop dan informasi data ke dalam variabel "$html"
         $html = view('admin/datalaporan/laporankegiatan', ['laporan' => $laporan]);
+
+        // Membuat objek Dompdf
+        $dompdf = new Dompdf();
 
         // Memuat konten HTML ke Dompdf
         $dompdf->loadHtml($html);

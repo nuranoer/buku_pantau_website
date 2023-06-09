@@ -51,6 +51,10 @@
                         <input type="text" class="form-control" name="nip" value="<?= $guru->nip ?>" placeholder="NIP">
                       </div>
                       <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="text" class="form-control" name="password" value="<?= $guru->password ?>" placeholder="Password">
+                      </div>
+                      <div class="form-group">
                         <label for="nama_guru">Nama</label>
                         <input type="text" class="form-control" name="nama_guru" value="<?= $guru->nama_guru ?>" placeholder="Nama">
                       </div>
@@ -96,7 +100,7 @@
                           <option value = "" disabled selected >Silahkan pilih</option>
                           <?php foreach($jadwal as $j): ?>
                             <option value="<?= $j['id_jadwal'] ?>"><?= $j['hari'] ?> </option>
-                            <option value="<?= $j->id_jadwal ?>" <?= $guru->id_jadwal == $j->id_jadwal ? 'selected' : '' ?>><?= $j->hari ?></option>
+                            <option value="<?= $j['id_jadwal'] ?>" <?= $guru->id_jadwal == $j['id_jadwal'] ? 'selected' : '' ?>><?= $j['hari'] ?></option>
                           <?php endforeach; ?>
                         </select>
                       </div>

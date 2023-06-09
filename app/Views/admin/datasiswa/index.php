@@ -30,7 +30,6 @@
                           <th><center>NIS</center></th>
                           <th><center>Nama</center></th>
                           <th><center>Jenis Kelamin</center></th>
-                          <th><center>Alamat</center></th>
                           <th><center>TTL</center></th>
                           <th><center>Aksi</center></th>
                         </tr>
@@ -45,7 +44,6 @@
                                         <td><?= $s['nomor_induk'] ?></td>
                                         <td><?= $s['nama_siswa'] ?></td>
                                         <td><?= $s['jenis_kelamin'] ?></td>
-                                        <td><?= $s['alamat_siswa'] ?></td>
                                         <td><?= $s['tempat_lahir'] ?>, <?= $s['tanggal_lahir'] ?></td>
                                         <td class = "d-flex justify-content-space-around ">
                                               <div class="col-3">

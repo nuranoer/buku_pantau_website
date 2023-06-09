@@ -8,7 +8,7 @@ class Guru extends Model
     protected $table = 'guru';
     protected $primaryKey = 'id_guru';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['nip', 'nama_guru', 'alamat_guru', 'jenis_kelamin', 'agama', 'no_hp', 'status_perkawinan', 'id_jadwal'];
+    protected $allowedFields = ['nip', 'password', 'nama_guru', 'alamat_guru', 'jenis_kelamin', 'agama', 'no_hp', 'status_perkawinan', 'id_jadwal'];
 
     public function get_data()
     {

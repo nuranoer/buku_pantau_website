@@ -49,6 +49,7 @@ class GuruController extends BaseController
     {
         $data = [
             'nip' => $this->request->getVar('nip'),
+            'password' => $this->request->getVar('password'),
             'nama_guru' => $this->request->getVar('nama_guru'),
             'alamat_guru' => $this->request->getVar('alamat_guru'),
             'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
@@ -63,6 +64,12 @@ class GuruController extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'NIP harus diisi'
+                ]
+            ],
+            'password' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Password harus diisi'
                 ]
             ],
             'nama_guru' => [
@@ -139,6 +146,7 @@ class GuruController extends BaseController
         
         $data = [
             'nip' => $this->request->getVar('nip'),
+            'password' => $this->request->getVar('password'),
             'nama_guru' => $this->request->getVar('nama_guru'),
             'alamat_guru' => $this->request->getVar('alamat_guru'),
             'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),

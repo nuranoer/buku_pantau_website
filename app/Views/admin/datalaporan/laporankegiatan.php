@@ -2,15 +2,22 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Kop Surat</title>
+    <link rel="shortcut icon" href="<?= base_url('assets') ?>/images/favicon.ico" />
+    <title>Laporan Kegiatan</title>
     <style>
         /* Gaya CSS untuk kop surat */
         .header {
             text-align: center;
             margin-bottom: 20px;
         }
+        .title{
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
         .logo {
             width: 200px;
+            height: 200px;
         }
         .company-info {
             text-align: center;
@@ -18,12 +25,13 @@
         }
         .company-name {
             font-weight: bold;
+            font-size: x-large;
         }
         .company-address {
             font-style: italic;
         }
         .line {
-        border-bottom: 1px solid black;
+        border-bottom: 4px solid black;
         margin-bottom: 10px;
         }
         table {
@@ -42,7 +50,7 @@
 </head>
 <body>
     <div class="header">
-    <img src="<?= base_url('assets/images/logodikdasmen.png') ?>" alt="Logo" class="logo">
+      <img src="<?= base_url('/assets/images/logo/logo.jpg') ?>" alt="image">
     </div>
     <div class="company-info">
         <div class="company-name">TAMAN POSYANDU SENTOSA</div>
@@ -50,6 +58,8 @@
         <div class="company-contact">Telp. 021-5725610</div>
     </div>
     <div class="line"></div>
+    <div class="title">
+        <h2>LAPORAN KEGIATAN</h2>
     <table>
         <thead>
             <tr>
@@ -72,6 +82,7 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+    </div>
 
 </body>
 </html>
